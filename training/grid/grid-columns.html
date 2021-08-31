@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .item{
+            padding: 3rem;
+            border:1px solid #ccc;
+            background:#f4f4f4;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        .grid{
+            display: grid;
+            /* grid-template-columns: 33% 200px auto; */
+            /* grid-template-columns: repeat(3,200px); */
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-gap: 2rem;
+        }
+        main{
+        display: grid;
+        grid-template-columns:3fr 1fr; 
+        grid-gap: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+    </div>
+    <main>
+        <section class="main">
+            <h3>welcome bruhh</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est cum, soluta dicta minima modi ipsum delectus aperiam eligendi cumque maxime nemo ad sapiente optio perferendis reprehenderit adipisci veritatis repellendus dignissimos!</p>
+        </section>
+        <aside>
+            <h1>hello</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis cumque voluptates officia temporibus pariatur cupiditate ad consequuntur earum blanditiis odit.</p>
+        </aside>
+    </main>
+</body>
+</html>

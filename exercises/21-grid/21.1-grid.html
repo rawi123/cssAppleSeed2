@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>min max grid</title>
+    <style>
+        .item{
+            padding: 3rem;
+            border:1px solid #ccc;
+            background:#f4f4f4;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.3rem;
+            border-radius: 10px;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-gap: 1rem;
+        }
+        .item:first-child{
+            background-color: red;
+            grid-column: 1/span 2;
+        }
+        .item:nth-child(2){
+            background-color: blue;
+            grid-column: 3/span 2;
+        }
+        .item:nth-child(3){
+            background-color: green;
+        }
+        .item:nth-child(4){
+            background-color: purple;
+            grid-column: 2/span 3;
+        }
+        .item:nth-child(5){
+            background-color: yellow;
+            grid-column: 1/span 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item item1">item 1</div>
+        <div class="item item2">item 2</div>
+        <div class="item item3">item 3</div>
+        <div class="item item4">item 4</div>
+        <div class="item item5">item 5</div>
+    </div>
+</body>
+</html>
