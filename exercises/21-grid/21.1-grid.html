@@ -17,27 +17,31 @@
         }
         .grid{
             display: grid;
-            grid-template-columns: repeat(4, auto);
+            grid-template-areas: 
+            'first first second second'
+            'third fourth fourth fourth'
+            'fifth fifth fifth fifth';
             grid-gap: 1rem;
         }
         .item:first-child{
             background-color: red;
-            grid-column: 1/span 2;
+            grid-area: first;
         }
         .item:nth-child(2){
             background-color: blue;
-            grid-column: 3/span 2;
+            grid-area: second;
         }
         .item:nth-child(3){
             background-color: green;
+            grid-area: third;
         }
         .item:nth-child(4){
             background-color: purple;
-            grid-column: 2/span 3;
+            grid-area: fourth;
         }
         .item:nth-child(5){
             background-color: yellow;
-            grid-column: 1/span 4;
+            grid-area: fifth;
         }
     </style>
 </head>
