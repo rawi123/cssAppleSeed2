@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            padding: 3rem;
+            border:1px solid #ccc;
+            background:#f4f4f4;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.3rem;
+            border-radius: 10px;
+        }
+        .grid{
+            display: grid;
+            grid-template-areas: 
+            'header header header header'
+            'blue green green purple'
+            'yellow yellow yellow yellow';
+            grid-gap: 1rem;
+        }
+        .item:first-child{
+            background-color: red;
+            grid-area: header;
+        }
+        .item:nth-child(2){
+            background-color: blue;
+            grid-area: blue;
+        }
+        .item:nth-child(3){
+            background-color: green;
+            grid-area: green;
+        }
+        .item:nth-child(4){
+            background-color: purple;
+            grid-area: purple;
+        }
+        .item:nth-child(5){
+            background-color: yellow;
+            grid-area: yellow;
+        }
+        @media (max-width:576px) {
+            .grid{
+                grid-template-areas: 
+            'header'
+            'blue'
+            'green'
+            'purple'
+            'yellow';
+            }
+        }
+        @media (min-width:577px) and (max-width:768px) {
+            .grid{
+                grid-template-areas: 
+                'header header header header'
+                'blue green green green'
+                'purple purple purple purple'
+                'yellow yellow yellow yellow';
+            }    
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 5</div>
+    </div>
+</body>
+</html>
